@@ -29,13 +29,14 @@ public class Fraction{
  }
 
  public string GetFractionString(){
+   // Este es para que imprima.
 
     string text = $"{_top}/{_bottom}";
     return text;
  }
 
  public double GetDecimalValue(){
-
+    // Este es para que haga el calculo respectivo.
     return (double)_top / (double)_bottom;
 
  }
