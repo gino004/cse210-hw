@@ -1,49 +1,58 @@
 using System;
 
-public class Word{
- 
- private string _text;
- private bool _isHidden; 
+public class Word
+{
 
- public Word(string text){
+  private string _text;
+  private bool _isHidden;
 
-  _text = text;
-  _isHidden = false;
+  public Word(string text)
+  {
 
- }
- 
- public void Hide(){
+    _text = text;
+    _isHidden = false;
 
- _isHidden = true;
-
- }
-  
- public void Show(){
-
-  _isHidden = false;
-
- }
-
- public bool IsHidden(){
-
-  return _isHidden;
-
- }
-
- public string GetDisplayText(){
- 
-   if(_isHidden == true){
-   string phrase = "";
-   foreach(char c in _text ){
-     phrase += "_";
-   }  
-     return phrase;
-  }
-  else{
-     return _text;
   }
 
- }
+  public void Hide()
+  {
+
+    _isHidden = true;
+
+  }
+
+  public void Show()
+  {
+
+    _isHidden = false;
+
+  }
+
+  public bool IsHidden()
+  {
+
+    return _isHidden;
+
+  }
+
+  public string GetDisplayText()
+  {
+
+    if (_isHidden == true)
+    {
+      string phrase = "";
+      foreach (char c in _text)
+      {
+        phrase += "_";
+      }
+      return phrase;
+    }
+    else
+    {
+      return _text;
+    }
+
+  }
 
 
 
