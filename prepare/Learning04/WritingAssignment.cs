@@ -1,19 +1,22 @@
 using System;
 
-public class WritingAssignment : Assignment{
+public class WritingAssignment : Assignment
+{
 
- private string _title;
+    private string _title;
 
-public WritingAssignment(string studentName,string topic, string title) : base(studentName, topic){
- 
-   _title = title;
-    
-}
+    public WritingAssignment(string studentName, string topic, string title) : base(studentName, topic)
+    {
 
- public string GetWritingInformation(){
+        _title = title;
 
-  return $"Tilte: {_title} By: {_studentName}"; 
+    }
 
- }
+    public string GetWritingInformation()
+    {
+
+        return $"Tilte: {_title} By: {_studentName}";
+
+    }
 
 }

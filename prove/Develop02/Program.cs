@@ -7,6 +7,7 @@ class Program
   {
     PromptGenerator pg = new PromptGenerator();
     Journal journal = new Journal();
+
     string pro_ = pg.GetRandomPrompt();
     string _no;
 
@@ -14,7 +15,6 @@ class Program
 
     if (_no == "1")
     {
-
       Console.WriteLine($"{pro_}");
       _no = Console.ReadLine();
 
@@ -24,23 +24,13 @@ class Program
       en._promptText = pro_;
       journal.AddEntry(en);
     }
-
     if (_no == "2")
     {
-
       journal.DisplayAll();
-
-
-
     }
-
-
   }
-
-
   static string Display_01()
   {
-
     string display;
 
     Console.WriteLine("Write 1");
@@ -50,9 +40,5 @@ class Program
     Console.WriteLine("Quit 5");
 
     return display = Console.ReadLine();
-
-
   }
-
-
 }
