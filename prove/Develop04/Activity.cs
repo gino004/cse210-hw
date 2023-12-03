@@ -5,11 +5,12 @@ public class Activity
 {
     private string _name;
     private string _description;
-    private int _duration;
+    protected int _duration;
     public Activity(string name, string description)
     {
         _name = name;
         _description = description;
+        
     }
     public void DisplayStartingMessage()
     {
@@ -21,7 +22,8 @@ public class Activity
         Console.WriteLine("Gracias por tu ezfuerzo.");
     }
     public void ShowSpinner(int seconds)
-    {
+    {   
+        _duration = seconds;
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(seconds);
 
