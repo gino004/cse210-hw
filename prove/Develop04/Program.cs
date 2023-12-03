@@ -2,14 +2,14 @@ using System;
 
 class Program
 {
-    private static List<string> prompt;
-    private static List<string> question;
+    private static List<string> _prompts;
+    private static List<string> _questions;
 
     static void Main(string[] args)
     {
         BreathingActivity breathing = new BreathingActivity("Actividad de Respiración", "Esta actividad le ayudará a relajarse al inhalar y exhalar lentamente. Despeja tu mente y concéntrate en tu respiración.");
         ReflectingActivity reflecting = new ReflectingActivity("Actividad de Reflección", "Esta actividad te ayudará a reflexionar sobre momentos de tu vida en los que has demostrado fortaleza y resiliencia. Esto te ayudará a reconocer el poder que tienes y cómo puedes usarlo en otros aspectos de tu vida.", question, prompt);
-        ListingActivity listing = new ListingActivity(50, prompt, "Actividad de Listado", "Esta actividad te ayudará a reflexionar sobre las cosas buenas de tu vida al hacerte enumerar tantas cosas como puedas en un área determinada.");
+        ListingActivity listing = new ListingActivity(50, _prompts, "Actividad de Listado", "Esta actividad te ayudará a reflexionar sobre las cosas buenas de tu vida al hacerte enumerar tantas cosas como puedas en un área determinada.");
         bool keep = true;
         string Salir = "";
         while (keep == true)
