@@ -3,18 +3,15 @@ public class ListingActivity : Activity
 {
     private int _count;
     private List<string> _prompts;
-    private string v;
-
     public ListingActivity(int count, List<string> prompt, string name, string description) : base(name, description)
     {
         _count = count;
         
-        _prompts = prompt;
-        prompt.Add("¿Quiénes son las personas que aprecias?");
-        prompt.Add("¿Cuáles son sus puntos fuertes personales?");
-        prompt.Add("¿Quiénes son las personas a las que has ayudado esta semana?");
-        prompt.Add("When have you felt the Holy Ghost this month?");
-        prompt.Add("¿Quiénes son algunos de tus héroes personales?");
+        _prompts.Add("¿Quiénes son las personas que aprecias?");
+        _prompts.Add("¿Cuáles son sus puntos fuertes personales?");
+        _prompts.Add("¿Quiénes son las personas a las que has ayudado esta semana?");
+        _prompts.Add("When have you felt the Holy Ghost this month?");
+        _prompts.Add("¿Quiénes son algunos de tus héroes personales?");
     }
     public void Run()
     {

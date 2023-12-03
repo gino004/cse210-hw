@@ -2,8 +2,8 @@ using System;
 
 class Program
 {
-    private static List<string> question;
     private static List<string> prompt;
+    private static List<string> question;
 
     static void Main(string[] args)
     {
