@@ -2,8 +2,8 @@ using System;
 public class ListingActivity : Activity
 {
     private int _count;
-    private List<string> _prompts;
-    public ListingActivity(int count, List<string> prompt, string name, string description) : base(name, description)
+    private List<string> _prompts = new List<string>();
+    public ListingActivity(int count, string name, string description) : base(name, description)
     {
         _count = count;
         

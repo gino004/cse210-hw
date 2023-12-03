@@ -1,10 +1,11 @@
 
 public class ReflectingActivity : Activity
 {
-    private List<string> _prompts = new List<string>();
+    private List<string> _prompts = new List<string>(); // Iniciamos dandole valor a la lista vacia para _prompts y _questions.
     private List<string> _questions = new List<string>();
-    public ReflectingActivity(string name, string description, List<string> question, List<string> prompt) : base(name, description)
-    {    
+    public ReflectingActivity(string name, string description) : base(name, description)
+    {    // Aquí se agrega las preguntas en el contructor, para que asi ya no sea necesario
+         // colocarlas en la clase principal como parametro, y a su vez 
         _prompts.Add("Piensa en un momento en el que defendiste a otra persona.");
         _prompts.Add("Piensa en un momento en el que hiciste algo realmente difícil.");
         _prompts.Add("Piensa en un momento en el que hiciste algo verdaderamente desinteresado.");
@@ -25,7 +26,7 @@ public class ReflectingActivity : Activity
         ShowSpinner(5);
         DisplayEndingMessage();
     }
-    public string GetRandomPrompt()
+    public string GetRandomPrompt() // Este metodo utiliza la instancia _prompts puesto que ya tiene almacenado las preguntas en ese objeto.
     {
         int numberRandom;
         Random random = new Random();
@@ -35,7 +36,7 @@ public class ReflectingActivity : Activity
     public string GetRandomQuestion()
     {
         int numberRandom;
-        Random random = new Random();
+        Random random = new Random(); // Aqui tenemos la instancia _questions de la lista, eso tiene almacenado las preguntas en el constructor.
         numberRandom = random.Next(_questions.Count);
         return _questions[numberRandom];
     }
