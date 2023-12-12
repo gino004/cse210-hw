@@ -1,7 +1,7 @@
 using System;
-public abstract class Goal
+abstract class Goal
 {
-    private string _shortName;
+    protected string _shortName;
     private string _description;
     private int _points;
     public Goal(string name, string description, int points)

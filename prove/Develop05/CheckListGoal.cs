@@ -1,6 +1,6 @@
 using System;
 
-public class ChecklistGoal : Goal
+class ChecklistGoal : Goal
 {
     private int _amountCompleted;
     private int _target;
