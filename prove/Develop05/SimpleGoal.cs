@@ -1,5 +1,3 @@
-using System;
-
 class SimpleGoal : Goal
 {
     private bool _isComplete;
@@ -17,11 +15,11 @@ class SimpleGoal : Goal
 
     public override bool IsComplete()
     {
-         return _isComplete;
+        return _isComplete;
     }
 
     public override string GetStringRepresentation()
     {
-        return $"{nameof(SimpleGoal)}:{_shortName},{_description},{_points},{_isComplete}";
+        return $"{_shortName}|{_description}|{_points}|{_isComplete}";
     }
 }
